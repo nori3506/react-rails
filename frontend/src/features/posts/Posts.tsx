@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../../app/hooks";
 import { Post } from "./Post";
+import { PostForm } from "./PostForm";
 import {
   fetchPostsAsync,
   selectPosts,
@@ -27,6 +28,7 @@ function Posts() {
       <div className="card">
         <div className="card-body">
           <h3>{status}</h3>
+          <PostForm />
           {posts &&
             posts.length > 0 &&
             posts.map((post) => {
